@@ -30,9 +30,9 @@ export default function Card({ item }) {
             height: width * 0.6,
           }}
         />
-        <Text className="text-neutral-300 ml-1">
-          {item.title.length > 14
-            ? item.title.slice(0, 14) + "..."
+        <Text className="text-white ml-1 text-center">
+          {item.title.length > 16
+            ? item.title.slice(0, 16) + "..."
             : item.title}
         </Text>
       </View>

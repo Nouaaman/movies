@@ -45,7 +45,7 @@ export default function SearchScreen() {
   return (
     <SafeAreaView className="bg-gray-900 flex-1">
       {/* search input */}
-      <View className="mx-4 mb-3 mt-2 flex-row justify-between items-center border border-gray-400 rounded-full">
+      <View className="mx-4 mb-3 mt-2 flex-row justify-between items-center border border-gray-400 rounded-full ">
         <TextInput
           onChangeText={setSearchText}
           placeholder="Search Movie"
@@ -66,20 +66,21 @@ export default function SearchScreen() {
       ) : (
         <>
           {results.length > 0 && (
-            <Text className="text-neutral-400  text-sm text-center font-light">
+            <Text className="text-neutral-300  text-sm text-center font-light">
               {results.length} results
             </Text>
           )}
           <ScrollView
             contentContainerStyle={{
-              paddingBottom: 10,
+              paddingBottom: 50,
+              paddingTop: 20,
               justifyContent: "center",
               flexDirection: "row",
               flexWrap: "wrap",
               alignItems: "center",
               gap: 20,
             }}
-            className="mt-2"
+            className="mt-2 border-t-2 border-gray-800"
           >
             {results.length ? (
               results.map((item, index) => <Card key={index} item={item} />)

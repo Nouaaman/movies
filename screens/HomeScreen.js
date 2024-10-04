@@ -43,8 +43,8 @@ export default function HomeScreen() {
   return (
     <View className="flex-1 bg-gray-900">
       {/* search bar */}
-      <SafeAreaView>
-        <View className="flex-row justify-between items-center mt-2 px-4">
+      <SafeAreaView className="border-b-2 border-gray-800 pt-2 bg-gray-900 shadow-2xl shadow-black">
+        <View className="flex-row justify-between items-center  px-4">
           <Text className="text-white text-2xl font-bold">Popular Movies</Text>
           <TouchableOpacity onPress={() => navigation.navigate("Search")}>
             <MagnifyingGlassIcon size="30" strokeWidth={2} color="white" />
@@ -57,14 +57,14 @@ export default function HomeScreen() {
       ) : (
         <ScrollView
           contentContainerStyle={{
-            paddingBottom: 10,
+            paddingBottom: 80,
+            paddingTop: 20,
             justifyContent: "center",
             flexDirection: "row",
             flexWrap: "wrap",
             alignItems: "center",
             gap: 20,
           }}
-          className="mt-4"
         >
           {movies.map((item, index) => (
             <Card key={index} item={item} />

@@ -24,20 +24,14 @@ export default function DetailsScreen() {
       className="flex-1 bg-gray-900"
     >
       {/* back button and item poster */}
-      <View className="w-full">
-        <SafeAreaView
-          className={
-            "absolute z-20 w-full flex-row justify-between items-center px-4 py-2"
-          }
+      <View className="w-full ">
+        <TouchableOpacity
+          style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
+          className="absolute top-4 left-4 z-20 rounded-2xl p-2"
+          onPress={() => navigation.goBack()}
         >
-          <TouchableOpacity
-            style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
-            className="rounded-2xl p-2"
-            onPress={() => navigation.goBack()}
-          >
-            <ChevronLeftIcon size="28" strokeWidth={3} color="white" />
-          </TouchableOpacity>
-        </SafeAreaView>
+          <ChevronLeftIcon size="28" strokeWidth={3} color="white" />
+        </TouchableOpacity>
 
         <View>
           <Image
